@@ -10,4 +10,10 @@ Rails.application.routes.draw do
 
   get '/signup' => 'users#new', as: 'signup'
   post '/users' => 'users#create'
+  
+  namespace :api do
+    namespace :v1 do
+      resources :movies, only: [:create]
+    end
+  end
 end
