@@ -1,4 +1,5 @@
 class Api::V1::MoviesController < ApplicationController
+  
   def create 
     @movie = Movie.new(movie_params)
     if @movie.save
