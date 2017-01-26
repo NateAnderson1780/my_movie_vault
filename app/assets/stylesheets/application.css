@@ -17,3 +17,8 @@
  .movie {
    border: 2px solid black;
  }
+ 
+ .watched {
+   text-decoration: line-through;
+   background-color: #D3D3D3;
+ }
