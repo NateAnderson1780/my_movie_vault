@@ -5,6 +5,19 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'spec_helper'
 require 'rspec/rails'
+require 'capybara/rails'
+require 'capybara/rspec'
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
+
+options = {js_errors: false}
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, options)
+end
+
+
+
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -57,10 +70,10 @@ RSpec.configure do |config|
 end
 
 def user_logs_in
-  User.create(email: "nate@nate.com", password: "nate", password_confirmation: "nate")
+  User.create(email: "new@new.com", password: "new", password_confirmation: "new")
   visit '/'
   
-  fill_in "email", with: "nate@nate.com"
-  fill_in "password", with: "nate"
+  fill_in "email", with: "new@new.com"
+  fill_in "password", with: "new"
   click_on "Submit"
 end
