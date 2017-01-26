@@ -1,0 +1,29 @@
+<div class="alert"></div>
+
+<form id="new-movie">
+  <label>Title:
+    <input id="movie-title">
+  </label>
+  <label>Note:
+    <input id="movie-note">
+  </label>
+  <input type="submit" value="Add Movie">
+</form></br></br>
+
+<div class="container">
+  <div id="movies-list">
+    <% @movies.each do |movie| %>
+      <div class='movie' data-id='<%= movie.id %>' id="movie-<%= movie.id %>">
+        <p class="movie-title">Title: <%= movie.title %></p>
+        <p class="movie-note">Note: <%= movie.note %></p>
+        <p class="movie_read">Watched?: <%= movie.watched %></p>
+
+        <p class="movie_buttons">
+          <button class="mark-watched">Mark as Watched</button>
+          <button class='edit-movie'><%= link_to "Edit", edit_movie_path(movie.id) %></button>
+        </p>
+
+      </div>
+    <% end %>
+  </div>
+</div>
