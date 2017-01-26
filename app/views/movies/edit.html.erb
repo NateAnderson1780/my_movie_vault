@@ -1,0 +1,10 @@
+<h1> Edit Your Movie </h1>
+
+<%= form_for(@movie) do |l| %>
+  <%= l.label :title %>
+  <%= l.text_field :title %>
+  <%= l.label :note %>
+  <%= l.text_field :note %>
+  
+  <%= l.submit "Update Movie" %>
+<% end %>
