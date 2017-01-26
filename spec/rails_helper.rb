@@ -70,10 +70,10 @@ RSpec.configure do |config|
 end
 
 def user_logs_in
-  User.create(email: "nate@nate.com", password: "nate", password_confirmation: "nate")
+  User.create(email: "new@new.com", password: "new", password_confirmation: "new")
   visit '/'
   
-  fill_in "email", with: "nate@nate.com"
-  fill_in "password", with: "nate"
+  fill_in "email", with: "new@new.com"
+  fill_in "password", with: "new"
   click_on "Submit"
 end
