@@ -25,7 +25,7 @@ RSpec.describe "user can add movie", :js => :true do
     within('#movies-list') do
       expect(page).not_to have_text("Turing")
       expect(page).not_to have_text("http://turing.io")
-      expect(page).not_to have_text("Read?: false")
+      expect(page).not_to have_text("Watched?: false")
     end
     
     expect(page).to have_text("Title can't be blank")

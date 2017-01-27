@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe "can mark movies as read", :js => :true do
+RSpec.describe "can mark movies as watched", :js => :true do
   
-  scenario "user can mark movies as read" do
+  scenario "user can mark movies as watched" do
     user_logs_in
     
     fill_in "movie-title", :with => "Big Lebowski"
@@ -27,7 +27,7 @@ RSpec.describe "can mark movies as read", :js => :true do
     end
   end
   
-  scenario "user can mark movies as unread" do
+  scenario "user can mark movies as unwatched" do
     user_logs_in
     fill_in "movie-title", :with => "Big Lebowski"
     fill_in "movie-note", :with => "The Dude knows everything"
