@@ -2,14 +2,14 @@ require "rails_helper"
 
 RSpec.describe "user can log in" do
   before(:each) do
-    User.create(email: "nate@nate.com", password: "nate", password_confirmation: "nate")
+    User.create(email: "test@test.com", password: "test", password_confirmation: "test")
   end
   
   scenario "user can log in" do
     visit '/'
 
-    fill_in "email", with: "nate@nate.com"
-    fill_in "password", with: "nate"
+    fill_in "email", with: "test@test.com"
+    fill_in "password", with: "test"
     click_on "Submit"
     
     expect(current_path).to eq(root_path)
@@ -30,8 +30,8 @@ RSpec.describe "user can log in" do
   scenario "user can log out" do
     visit '/'
 
-    fill_in "email", with: "nate@nate.com"
-    fill_in "password", with: "nate"
+    fill_in "email", with: "test@test.com"
+    fill_in "password", with: "test"
     click_on "Submit"
     
     expect(current_path).to eq(root_path)

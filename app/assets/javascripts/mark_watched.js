@@ -38,7 +38,7 @@ function changeStatusToWatched() {
   button.removeClass('mark-watched')
   button.addClass('mark-unwatched')
   button.html("Mark Unwatched")
-  button.parent().parent().find('.movie-watched').text("Watched?: true")
+  button.parent().parent().find('.movie-watched').text('Watched?: true')
 }
 
 function markUnwatched(event) {
@@ -62,6 +62,6 @@ function changeStatusToUnwatched() {
   button.removeClass('mark-unwatched')
   button.addClass('mark-watched')
   button.html("Mark as Watched")
-  button.parent().parent().find('.movie-watched').text("Watched?: false")
+  button.parent().parent().find('.movie-watched').text('Watched?: false')
 }
 

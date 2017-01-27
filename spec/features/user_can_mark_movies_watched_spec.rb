@@ -4,6 +4,7 @@ RSpec.describe "can mark movies as read", :js => :true do
   
   scenario "user can mark movies as read" do
     user_logs_in
+    
     fill_in "movie-title", :with => "Big Lebowski"
     fill_in "movie-note", :with => "The Dude knows everything"
     click_on "Add Movie"
