@@ -3,6 +3,7 @@ require "rails_helper"
 RSpec.describe "user can edit movies", :js => :true do
   
   scenario "edit an existing movie" do
+    user_logs_in
     
     fill_in "movie-title", :with => "American Beauty"
     fill_in "movie-note", :with => "Kevin Spacey nails it"
@@ -32,6 +33,7 @@ RSpec.describe "user can edit movies", :js => :true do
   
   scenario "can not edit movie without including title" do
     user_logs_in
+    
     fill_in "movie-title", :with => "American Beauty"
     fill_in "movie-note", :with => "Kevin Spacey nails it"
     click_on "Add Movie"

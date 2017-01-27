@@ -33,7 +33,7 @@ function movieHTML(movie) {
   return `<div class='movie' data-id='${movie.id}' id="movie-${movie.id}">
           <p class="movie-title">Title: ${movie.title}</p>
           <p class="movie-note">Note: ${movie.note}</p>
-          <p class="movie_read">Watched?: ${movie.watched}</p>
+          <p class="movie-watched">Watched?: ${movie.watched}</p>
 
           <p class="movie_buttons">
             <button class="mark-watched">Mark as Watched</button>
@@ -49,6 +49,6 @@ function clearMovie() {
 }
 
 function showFailure(failureData) {
-  $('.alert').html("This link could NOT be created: " + failureData.responseText);
+  $('.alert').html("This movie could NOT be created: " + failureData.responseText);
   clearMovie();
 }

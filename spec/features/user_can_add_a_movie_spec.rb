@@ -6,8 +6,8 @@ RSpec.describe "user can add movie", :js => :true do
     
     fill_in "movie-title", :with => "Pulp Fiction"
     fill_in "movie-note", :with => "Tarantino's best"
+    
     click_on "Add Movie"
-
     within('#movies-list') do
       expect(page).to have_text("Pulp Fiction")
       expect(page).to have_text("Tarantino's best")
@@ -22,7 +22,7 @@ RSpec.describe "user can add movie", :js => :true do
     fill_in "movie-note", :with => "Tarantino's best"
     click_on "Add Movie"
 
-    within('#links-list') do
+    within('#movies-list') do
       expect(page).not_to have_text("Turing")
       expect(page).not_to have_text("http://turing.io")
       expect(page).not_to have_text("Read?: false")
