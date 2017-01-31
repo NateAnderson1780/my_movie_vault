@@ -23,3 +23,5 @@ class MoviesController < ApplicationController
     params.require(:movie).permit(:title, :note)
   end
 end
+
+# This may need a destroy method eventually
