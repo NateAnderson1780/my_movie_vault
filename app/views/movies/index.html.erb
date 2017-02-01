@@ -1,14 +1,17 @@
 <div class="alert"></div>
-
-<form id="new-movie">
-  <label>Title:
-    <input id="movie-title">
-  </label>
-  <label>Note:
-    <input id="movie-note">
-  </label>
-  <input type="submit" value="Add Movie">
-</form></br></br>
+<div class="container">
+  <div class="well">
+    <form id="new-movie">
+      <label>Title:
+        <input id="movie-title">
+      </label>
+      <label>Note:
+        <input id="movie-note">
+      </label>
+      <input type="submit" value="Add Movie">
+    </form></br></br>
+  </div>
+</div>
 
 <div class="sort">
   <button class="sort-movies">Sort by Title</button>
@@ -25,6 +28,7 @@
 
 <hr></br></br>
 <div class="container">
+  <div class="well">
   <div id="movies-list">
     <% @movies.each do |movie| %>
       <div class='movie' data-id='<%= movie.id %>' id="movie-<%= movie.id %>">
@@ -39,5 +43,6 @@
 
       </div>
     <% end %>
+  </div>
   </div>
 </div>

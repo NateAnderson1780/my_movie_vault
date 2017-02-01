@@ -13,7 +13,8 @@
         <%= message %>
       </div>
     <% end %></br></br>
-  
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
     <% if current_user %>
       Welcome, <%= current_user.email %></br>
       <%= link_to 'Logout', logout_path %>
@@ -21,6 +22,8 @@
       <%= link_to 'Login', login_path %>
       <%= link_to 'Sign up', signup_path %>
     <% end %></br></br></br>
+  </div>
+  </nav>
   
     <div class="container">
       <%= yield %>
