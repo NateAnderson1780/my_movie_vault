@@ -24,4 +24,4 @@ class MoviesController < ApplicationController
   end
 end
 
-# This may need a destroy method eventually
+# This may need a destroy method if we want to add delete functionality
